@@ -1,0 +1,11 @@
+{{ define "main" }}
+<!-- adds hometext from the config file
+<div class="btn">
+  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+</div> -->
+<div id="home-jumbotron"><br/>
+{{ partial "front-page.html" . }}
+</div>
+{{ end }}
+
+

@@ -1,0 +1,40 @@
+baseURL = "http://thebluebayou.github.io"
+publishdir = "thebluebayou.github.io"
+languageCode = "en-us"
+title = "Hugo Blog"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  blog = "/:filename/"
+
+# See https://feathericons.com/
+# The value of pre is the icon name
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    pre = "edit"
+    url = "/post/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    pre = "tag"
+    url = "/tags/"
+    weight = 3
+[[menu.main]]
+    name = "Collections"
+    pre = "database"
+    url = "/collections/"
+    weight = 4
+
+[params]
+  containerMaxWidth = "700px"
+  dateFormat = "Jan 2, 2006"
+  homeText = "You just made a Hugo blog from scratch."
+
