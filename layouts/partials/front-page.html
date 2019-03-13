@@ -1,10 +1,5 @@
-<!-- Groups content according to content section. The ".Key" in this instance will be the section's title. -->
-{{ range .Pages.GroupByParam "layout" }}
-
-<!-- {{ .Key }} this will  display layout above i.e post needs rapped in html -->
-
-{{ range first 10 .Pages }}
-<article>
+{{ range first 15 .Site.Pages }}{{ if eq .Layout "post" }}
+    <article>
       <!-- this <div> includes the title summary -->
       <div>
         <h3><a  href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
@@ -17,5 +12,6 @@
       </div>
       {{ end }}
 	</article><br />
+
 {{ end }}
 {{ end }}

@@ -1,10 +1,7 @@
-baseURL = "http://thebluebayou.github.io"
-publishdir = "thebluebayou.github.io"
+baseURL = "http://keithmillar.github.io"
+publishdir = "keithmillar.github.io"
 languageCode = "en-us"
-title = "Hugo Blog"
-
-[taxonomies]
-  tag = "tags"
+title = "Keith's Diary and Other Stuff"
 
 [permalinks]
   blog = "/:filename/"
@@ -18,23 +15,25 @@ title = "Hugo Blog"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Blog"
+    name = "Archive"
     pre = "edit"
-    url = "/post/"
+    url = "/blog/"
     weight = 2
   [[menu.main]]
     name = "Tags"
     pre = "tag"
     url = "/tags/"
     weight = 3
-[[menu.main]]
+   [[menu.main]]
     name = "Collections"
     pre = "database"
-    url = "/collections/"
-    weight = 4
+    url = "/collection/"
+	weight = 4
+
+[taxonomies]
+  tag = "tags"
 
 [params]
-  containerMaxWidth = "700px"
-  dateFormat = "Jan 2, 2006"
-  homeText = "You just made a Hugo blog from scratch."
+  dateFormat = "Jan 02, 2006"
+#  homeText = "You just made a Hugo blog from scratch."
 
