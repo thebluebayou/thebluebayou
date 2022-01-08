@@ -1,17 +1,17 @@
-{{ range first 15 .Site.Pages }}{{ if eq .Layout "post" }}
+{{ range first 10 (where site.RegularPages "Type" "in" site.Params.mainSections).ByDate.Reverse }}
     <article>
       <!-- this <div> includes the title summary -->
       <div>
-        <h3><a  href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+	<i data-feather="calendar"></i> <span>{{ .Date.Format "02 Jan, 2006" }}</span>
         {{ .Summary }}
       </div>
       {{ if .Truncated }}
       <!-- This <div> includes a read more link, but only if the summary is truncated... -->
       <div>
-			  <a href="{{ .RelPermalink }}">Read More…</a>
+        <a href="{{ .RelPermalink }}">Read More…</a>
       </div>
       {{ end }}
-	</article><br />
+    </article>
+{{ end }}
 
-{{ end }}
-{{ end }}

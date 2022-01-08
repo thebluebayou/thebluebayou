@@ -1,10 +1,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  {{ .Hugo.Generator }}
+  {{ hugo.Generator }}
 <link rel="stylesheet" href="{{"/css/style.css" | relURL }}" />
 <link rel="stylesheet" href="{{"/css/fonts.css" | relURL }}" />
   {{ $title := print .Title " | " .Site.Title }}
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ $title }}</title>
+  <!-- <script src="https://unpkg.com/feather-icons"></script> -->
 </head>

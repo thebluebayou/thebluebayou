@@ -1,0 +1,12 @@
+{{ with .Site.GetPage "section" "wine" }}
+   {{ range .Data.Pages.GroupByDate "2006" }}
+   <h3><i data-feather="calendar"></i>{{ .Key }}</h3>
+    {{ range .Pages }}
+      <div class=foodtitle>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class=fooddate>{{ .Date.Format "2 January" }}</span>
+      </div>
+    {{ end }}
+        <hr>
+   {{ end }}
+    {{ end }}

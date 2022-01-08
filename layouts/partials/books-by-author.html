@@ -1,8 +1,0 @@
-{{ range sort .Site.Data.books ".author" "asc" .Params.GroupBy ".author"}}
-<ul>	
-		<li>{{ .title }}<br />
-	 {{ .author }}</li>
-	</ul>
-{{end}}
-
-

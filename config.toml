@@ -1,10 +1,12 @@
 baseURL = "http://thebluebayou.github.io"
 publishdir = "thebluebayou.github.io"
 languageCode = "en-us"
-title = "Keith's Diary and Other Stuff"
+title = "Flo's Food and Drink"
+enableRobotsTXT = "false"
 
 [permalinks]
   blog = "/:filename/"
+  relativeURLs = "true"
 
 # See https://feathericons.com/
 # The value of pre is the icon name
@@ -15,19 +17,19 @@ title = "Keith's Diary and Other Stuff"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Archive"
+    name = "Recipes"
     pre = "edit"
-    url = "/blog/"
+    url = "/recipes/"
     weight = 2
   [[menu.main]]
+    name = "Wine"
+    pre = "edit"
+    url = "/wine/"
+    weight = 3
+   [[menu.main]]
     name = "Tags"
     pre = "tag"
     url = "/tags/"
-    weight = 3
-   [[menu.main]]
-    name = "Collections"
-    pre = "database"
-    url = "/collection/"
 	weight = 4
 
 [taxonomies]
@@ -36,4 +38,12 @@ title = "Keith's Diary and Other Stuff"
 [params]
   dateFormat = "Jan 02, 2006"
 #  homeText = "You just made a Hugo blog from scratch."
+	mainSections = ["blog"]
 
+[build]
+  command = "hugo"
+  publish = "/public/"
+
+[build.environment]
+  HUGO_VERSION = "0.89.4"
+#build test

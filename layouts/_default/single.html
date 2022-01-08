@@ -1,10 +1,4 @@
 {{ define "main" }}
-
-<div class="article-meta">
 <h1>{{ .Title }}</h1>
-</div>
-{{ partial "date-and-tags.html" . }}
-<br><br>
 {{ .Content }}
-
 {{ end }}

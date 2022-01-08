@@ -1,7 +1,11 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-tags: [change me]
-draft: false
+layout: post
+category: recipes
+tags:
+ - change me
 ---
+
+![](/images/wine/)
 

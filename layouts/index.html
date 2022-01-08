@@ -1,6 +1,21 @@
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+       {{ block "main" . }}{{ end }}
+       Hi Flo does her stuff here<i data-feather="calendar"></i>
 {{ define "main" }}
   <p >{{ .Site.Params.homeText | markdownify }}</p>
 {{ partial "front-page.html" . }}
 {{ end }}
+       <div class=footer>
+       <footer>
+		  {{ partial "footer.html" . }}
+		  </footer>
+       </div>
+    {{ partial "script.html" . }}
+  </body>
+</html>
 
 
