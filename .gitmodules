@@ -1,3 +1,4 @@
 [submodule "thebluebayou.github.io"]
 	path = thebluebayou.github.io
-	url = https://github.com/thebluebayou/thebluebayou.github.io.git
+	#url = https://github.com/thebluebayou/thebluebayou.github.io.git
+	url = git@github.com-thebluebayou:thebluebayou/thebluebayou.github.io.git
